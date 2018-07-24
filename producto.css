@@ -1,0 +1,243 @@
+
+.contenedor {
+    height: 100px;
+    width: 430px;
+    margin: auto;
+    -webkit-perspective: 700;
+    background: green;
+    display: block;
+    position: relative;
+}
+
+.carta {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 2s;
+}
+/*.carta:hover {
+    transform: rotateY(180deg);
+    background: red;
+}*/
+/*
+@media (max-width:468px) {
+    .contenedor {
+        display: block;
+        width: 300px;
+        }
+    .carta {
+        display: block;
+        width: 300px;
+    }
+    
+}*/
+
+.lado {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+}
+
+.frente {
+    background: rgba(242, 248, 250, 1);
+    width: 100%;
+    height: 100%;
+}
+
+.atras {
+    background: rgba(220, 220, 220, 0.9);
+    /*transform: rotatey(180deg);*/
+    width: 100%;
+    height: 100%;
+
+}
+
+/*@media (min-width:468px){
+    .atras {
+        display: block;
+        width: 550px;
+    }
+}
+
+@media (min-width:768px){
+    .atras {
+        display: block;
+        width: 520px;
+    }
+}
+
+@media (min-width:1025px){
+    .atras {
+        display: block;
+        width: 530px;
+    }
+}
+
+@media (max-width:468px) {
+    .atras {
+        display: block;
+        width: 300px;
+        }
+    .carta {
+        display: block;
+        width: 300px;
+    }
+    
+}*/
+
+.grid-wall {
+    display: block;
+    
+}
+
+.grid-wall-img-3 {
+    display: flex;
+    grid: 1% / 33.3% 33.3% 33.4%;
+    /*width: 115px;
+    height: 115px;*/
+    grid-gap: 1px;
+    position: relative;
+    padding: 0px 0px;
+    justify-content: center;
+    
+
+}
+
+.grid-wall-img {
+    display: flex;
+    grid: 1% / 100% 0% 0%;
+    width: 240px;
+    height: 240px;
+    position: relative;
+    padding: 2px 2px;
+}
+
+.grid-wall-img-left {
+    display: flex;
+    grid: 1% / 50% 50% 0%;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    padding: 2px 2px;
+}
+
+.tarjeta-modal {
+    /*TARJETA COLOR--*/
+    background-image: linear-gradient(90deg, rgba(56, 19, 60, 0.9) 50%, rgba(205, 230, 254, 0.3) 25%, rgba(205, 230, 254, 0.5) 50%, rgba(205, 230, 254, 0.3) 50%, rgba(205, 230, 254, 0.5) 75%, rgba(255, 255, 255, 1) 25%, rgba(254, 254, 254, 0.9));
+    background-color: rgba(254, 254, 254, 0.9);
+
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.12), 0 3px 3px rgba(0, 0, 0, 0.24);
+    position: relative;
+    /*margin: 40px auto;*/
+    margin-bottom: 40px;
+    border: 1px solid hsla(0, 0%, 8%, .2);
+
+    width: 100%;
+    height: 100%;
+    /*grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-auto-rows: minmax(180px, auto);*/
+    border-right-color: 10px solid red;
+    border-left-color: 10px solid chartreuse;
+    border-bottom-color: 10px solid coral;
+    border-top-color: 10px solid darkmagenta;
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+@media (max-width:468px) {
+    .tarjeta-modal {
+        display: block;
+        width: 300px;
+        }
+    .fco-masonry-modal {
+        display: block;
+        width: 50px;
+    }
+    .fco-masonry-tag-modal{
+        display: flex;
+        width: 200px;
+    }
+    
+}
+
+.fco-masonry-modal {
+    /* FONDO DE TODAS LAS TARJETAS QUE INCLUYE */
+    display: grid;
+    /*height: 500px;  /*solo se pone si se usara SCROLL VERTICAL, se debe poner obligatoriamente para funcionar */
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    /* CORRESPONDE AL ANCHO   */
+    grid-gap: 2px;
+    /* SEPARACION DE LAS CAJAS  */
+    grid-auto-rows: minmax(100px, auto);
+    /* ALTO DE LAS CAJAS  */
+    padding: 5px 5px 5px 5px;
+    /* ESPACIO ENTRE GRILLA Y BORDE CADA ESPACIO ES UN BORDE*/
+    background-color: rgba(244, 254, 254, 1);
+    /*background-image: linear-gradient(to bottom, whitesmoke 30%, green 50%);*/
+    overflow: auto;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+
+}
+
+.fco-masonry-tag-modal {
+    /*TARJETA INDIVIDUAL   */
+    display: grid;
+    /*grid: 1% / 60% 20% 20%;*/
+    width: 100%;
+    padding: 1px 1px 1px 1px;
+    /* MARGEN DE LA IMG RSPECTO DE LA TARJETA  */
+    /*font-size: 30px;
+    font-weight: 400;*/
+    /*text-transform:  uppercase;  */
+    /*TEXTO EN MAYUSCULA  */
+    /*text-align: center;
+    color: whitesmoke;*/
+    /* COLOR DEL TEXTO  */
+    background-color: whitesmoke;
+    /* COLOR DE la tarjeta completa */
+    border-radius: 2px;
+    /* BORDE DE LOS ITEMS */
+    &:nth-child(odd) overflow: auto;
+    background-image: linear-gradient(90deg, rgba(250, 250, 250, 0.6) 25%, rgba(250, 250, 250, 0.6) 25%, rgba(250, 240, 240, 0.6) 50%, rgba(240, 240, 240, 0.6) 50%, rgba(254, 254, 210, 0.6) 75%, rgba(250, 250, 250, 0.6) 75%, rgba(250, 250, 250, 0.6));
+    background-color: rgba(54, 54, 54, 0.9);
+    background-size: 16px 16px;
+}
+
+.grid-container-chip-modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    grid: 1% / 25% 25% 25% 25%;
+    grid-gap: 0px;
+    padding: -10px 10px;
+
+    box-shadow: 0 1px 2px lightgrey;
+    -webkit-box-shadow: 0 1px 2px lightgrey;
+    -moz-box-shadow: 0 1px 2px lightgrey;
+
+    margin-bottom: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    /*float:right;*/
+    /*background-image: linear-gradient(-45deg, #fff 25%, rgba(280, 280, 280, 0.1) 25%, rgba(280, 280, 280, 0.9) 50%, #fff 50%, #fff 75%, rgba(254, 254,254, 0.9) 75%, rgba(254, 254,254, 0.9));*/
+    border-bottom: 1px solid rgba(177, 177, 177, 0.5);
+    position: relative;
+    background-color: rgba(44, 24, 54, 1);
+    /*font-size: 28px;*/
+    /*text-align: left;*/
+    text-shadow: 1px 1px lightgrey;
+
+
+}
